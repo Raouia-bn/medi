@@ -1,0 +1,362 @@
+
+.doctor-list {
+  padding: 20px;
+}
+
+/* Grid layout for the doctor items to display them side-by-side */
+.doctor-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+  gap: 30px;
+}
+
+/* Doctor item card */
+.doctor-item {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for details and calendar */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section for doctor details (image and text) */
+.doctor-details {
+  flex: 1; /* Takes 1 portion of the flex layout */
+  margin-right: 20px;
+  text-align: center; /* Center align text and image */
+}
+
+/* Doctor image */
+.doctor-image img {
+  width: 100px; /* Set a fixed width for the image */
+  height: 100px; /* Set a fixed height for the image */
+  border-radius: 50%; /* Make the image round */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+/* Section for the calendar */
+.calendar-section {
+  flex: 1; /* Takes another portion of the flex layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Calendar styles */
+.calendar-section .calendar {
+  width: 100%; /* Full width of the container */
+}
+
+/* Title for the doctor's planning section */
+.calendar-section h5 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Popup styling */
+.appointment-form-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: 90%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Popup content form */
+.appointment-form-popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form label styling */
+.appointment-form-popup label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Form input styling */
+.appointment-form-popup input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Popup button container */
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Cancel and submit button styling */
+.popup-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-buttons button[type="button"] {
+  background-color: #ccc;
+}
+
+.popup-buttons button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.popup-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* Search input styling */
+.search-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .doctor-items {
+    grid-template-columns: 1fr;
+  }
+  .doctor-item {
+    flex-direction: column;
+  }
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  text-align: center; /* Center the text */
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-blue:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+.doctor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 350px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.react-calendar {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.react-calendar__tile--disabled {
+  background-color: #f8d7da !important; /* Red background for disabled/unavailable days */
+  color: #721c24 !important; /* Darker text color for better readability */
+}
+.doctor-appointments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.unavailable-days, .calendar-section, .appointments-section {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.unavailable-days h3, .calendar-section h3, .appointments-section h3 {
+  margin: 0 0 10px;
+}
+.appointments-container {
+  display: flex; /* Utilise Flexbox pour la disposition */
+  justify-content: space-between; /* Espace entre les sections */
+  align-items: flex-start; /* Alignement en haut */
+}
+
+.unavailable-days, .calendar-section, .appointments-section {
+  flex: 1; /* Chaque section occupe une portion égale de l'espace */
+  margin: 10px; /* Marge autour des sections */
+  padding: 10px; /* Espacement interne */
+  border: 1px solid #ccc; /* Bordure pour chaque section */
+  border-radius: 5px; /* Bords arrondis */
+  background-color: #f9f9f9; /* Couleur de fond */
+}
+
+.unavailable-days h3, .calendar-section h3, .appointments-section h3 {
+  margin: 0 0 10px; /* Marge pour les titres */
+}
+.appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.appointment-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-card h4 {
+  margin: 0 0 8px;
+}
+
+.appointment-actions {
+  margin-top: 12px;
+}
+
+.appointment-actions button {
+  margin-right: 0px;
+}
+/**
+/* DoctorList.css */
+.white-calendar {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+}
+*/
+.white-calendar .react-calendar__tile {
+  background: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.white-calendar .react-calendar__tile--active,
+.white-calendar .react-calendar__tile--now {
+  background: #ffd700 !important; /* Couleur de l'élément sélectionné ou d'aujourd'hui */
+  color: black !important;
+}
+
+.white-calendar .react-calendar__navigation button {
+  background: white;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.white-calendar .react-calendar__tile--disabled {
+  background: #f2f2f2; /* Couleur pour les jours désactivés */
+  color: #b3b3b3;
+}
+/**/
+.cc {
+  background-color: #8fc1f7;
+  color: white;
+  padding: 12px 25px; /* Agrandir le bouton Ajouter */
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 20px; /* Augmenter la taille du texte */
+}
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.time-slot {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.time-slot.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-blue {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-blue:hover {
+  background-color: #0056b3;
+}

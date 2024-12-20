@@ -1,0 +1,242 @@
+/* Conteneur de la popup */
+.popup-content {
+    position: absolute;
+    width: fit-content; /* La largeur de la popup s'adapte à son contenu */
+    max-width: 1200px; /* Limiter la largeur maximale pour éviter une trop grande taille */
+    padding: 30px; /* Espace intérieur */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Ombre pour un meilleur effet visuel */
+    height: auto; /* La hauteur s'ajuste automatiquement */
+    overflow-y: auto; /* Permettre le défilement vertical si nécessaire */
+}
+
+/* Mise en page des champs de médicament sur une ligne */
+.medication-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligner les éléments à gauche */
+    margin-bottom: 15px; /* Augmenter l'espace entre les champs */
+    width: 100%; /* S'assurer que la ligne occupe toute la largeur disponible */
+}
+
+/* Espacement entre les champs */
+.medication-row input {
+    flex: 1;
+    margin-right: 15px; /* Ajouter un peu plus d'espace entre les champs */
+    min-width: 150px; /* Assurer que les champs aient une largeur minimale */
+}
+
+/* Bouton retirer pour chaque médicament */
+.remove-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 15px; /* Agrandir le bouton retirer */
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px; /* Augmenter la taille du texte */
+}
+
+.remove-btn:hover {
+    background-color: darkred;
+}
+
+/* Mise en page des boutons de création et ajout */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px; /* Augmenter l'espace entre les boutons */
+}
+
+/* Bouton Ajouter un médicament */
+.button[type="button"] {
+    background-color: #8fc1f7;
+    color: white;
+    padding: 12px 25px; /* Agrandir le bouton Ajouter */
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px; /* Augmenter la taille du texte */
+}
+
+button[type="button"]:hover {
+    background-color: #8fc1f7;
+}
+
+/* Bouton de soumission (Créer / Mettre à jour) */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px; /* Agrandir le bouton de soumission */
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px; /* Augmenter la taille du texte */
+}
+
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Bouton de fermeture (X) */
+.close-btn {
+    position: absolute;
+    top: 15px; /* Espacement avec le bord supérieur */
+    right: 15px; /* Espacement avec le bord droit */
+    font-size: 20px; /* Taille du X */
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+.btn-common {
+    padding: 10px 20px; /* Ajuste les dimensions internes */
+    font-size: 16px; /* Assure une taille de texte uniforme */
+    width: 110px; /* Définir une largeur fixe */
+    text-align: center;
+  }
+  
+  .btn-ordonnace {
+    background-color: #007bff; /* Couleur pour "Add Medication" */
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  
+  .btn-comm {
+    padding: 10px 20px; /* Ajuste les dimensions internes */
+    font-size: 16px; /* Assure une taille de texte uniforme */
+    width: 120px; 
+    height: 43px;/* Définir une largeur fixe */
+    text-align:center;
+
+  }
+  /* Popup général */
+
+
+.prescription-container {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 600px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .prescription-header {
+    text-align: center;
+    border-bottom: 2px solid #000;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .prescription-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .prescription-body {
+    line-height: 1.6;
+  }
+  
+  .prescription-footer {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 2px solid #000;
+    padding-top: 10px;
+  }
+  
+  .btn-print {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn-print:hover {
+    background-color: #45a049;
+  }
+  @media print {
+    .popup {
+      position: static;
+      width: 100%;
+      height: 100%;
+      box-shadow: none;
+    }
+    .popup-content {
+      border: none;
+      box-shadow: none;
+    }
+    .close-btn {
+      display: none;
+    }
+    .btn-print {
+      display: none;
+    }
+  }
+  .prescription-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+  
+  .prescription-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo-section {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .patient-info,
+  .medication-list,
+  .footer-info {
+    margin: 20px 0;
+  }
+  
+  .footer-info {
+    text-align: center;
+    font-size: 0.9em;
+  }
+  
+  .btn-print {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .btn-print:hover {
+    background-color: #0056b3;
+  }
+  

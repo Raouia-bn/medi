@@ -1,0 +1,121 @@
+/* Style de base pour la page */
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #fef7f4, #fdece6);
+    text-align: center;
+    height: 100vh;  /* Utilise toute la hauteur de l'écran */
+    margin: 0;
+    flex-direction: column;  /* Disposition verticale */
+  }
+  
+  /* Conteneur de la page */
+  .container {
+    width: 100%;  /* Utilise 100% de la largeur de l'écran */
+    max-width: 357px;  /* Limite la largeur pour que le contenu ne soit pas trop large */
+    height: 100%;  /* Hauteur dynamique en fonction du contenu */
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Espace entre le titre et les boutons */
+  }
+  
+  /* Illustration */
+  .illustration {
+    width: 50%;  /* Image plus grande */
+    height: 30%;
+    margin-bottom: 30px;
+    display: block;  /* Centrer l'image */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Titre principal */
+  .title {
+    font-size: 3rem;  /* Taille plus grande du titre */
+    font-weight: bold;
+    color: #407BFF;
+    margin: 0;  /* Enlever les marges pour centrer le titre */
+    align-self: center;  /* Centrer horizontalement le titre */
+  }
+  
+  /* Sous-titre (si nécessaire) */
+  .subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    padding: 0 10%;
+    flex-grow: 1;  /* Permet de pousser les boutons vers le bas */
+  }
+  
+  /* Style des boutons */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;  /* Placer les boutons au bas du conteneur */
+    gap: 10px;
+    margin-top: 50px;
+  }
+  
+  /* Boutons avec couleur personnalisée et taille réduite */
+  .login-button, .register-button {
+    font-size: 0.9rem;  /* Boutons plus petits */
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+   /* Couleur personnalisée */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .register-button {
+ 
+    color: #FFFFFF;
+  
+  }
+  
+  /* Media Query pour des écrans plus petits (par exemple pour 357x538px) */
+  @media (max-width: 357px) {
+    .container {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .subtitle {
+      font-size: 0.9rem;
+      padding: 0 5%;
+    }
+  
+    .login-button, .register-button {
+      padding: 8px 0;
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Media Query pour les écrans très larges (par exemple, tablettes ou grands écrans) */
+  @media (min-width: 768px) {
+    .container {
+      max-width: 600px;
+    }
+  
+    .title {
+      font-size: 3.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  }
+  

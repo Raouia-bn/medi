@@ -1,0 +1,102 @@
+/* Style de base pour la page */
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #fef7f4, #fdece6);
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+  }
+  
+  /* Conteneur de la page */
+  .container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Titre principal */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    margin-top: 50px; /* Espace sous le titre */
+  }
+  
+  /* Input fields */
+  .input-item {
+    margin-top: -60px;
+    margin-bottom: -60px; /* Réduit l'espace entre les champs d'entrée */
+  }
+  
+    /* Boutons avec couleur personnalisée et taille réduite */
+    .login-button, .register-button {
+        font-size: 0.9rem;  /* Boutons plus petits */
+        padding: 10px 0;
+        width: 100%;
+        border-radius: 12px;
+        cursor: pointer;
+        background-color: #407BFF;  /* Couleur personnalisée */
+        color: white;
+        font-weight: bold;
+      }
+      
+      .register-button {
+        background-color: #407BFF;
+        color: #FFFFFF;
+        border: 2px solid #407BFF;
+      }
+  .footer-text {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 100px;
+    margin-top:-50px;
+
+  }
+  
+  .footer-link {
+    color: #407bff;
+    text-decoration: none;
+  }
+  
+  
+  
+  /* Header style */
+  .header {
+    background-color: #407bff;
+  }
+  
+  .header-title {
+    color: #407bff;
+    text-align: center;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 357px) {
+    .container {
+      padding: 15px;
+    }
+    .title {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 600px;
+    }
+    .title {
+      font-size: 3rem;
+    }
+  }
+  

@@ -1,0 +1,160 @@
+/* Style de base pour la carte */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Nécessaire pour le positionnement absolu du bouton */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: #fff;
+    border-color: #9eccfd;
+}
+
+/* Bouton d'acceptation positionné en bas à droite et tourné à 90 degrés */
+.btn-accept {
+    position: absolute;
+    top: 10px;   /* Positionner le bouton à 20px du bas */
+    right: 10px;    /* Positionner le bouton à 20px de la droite */
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #fff;
+    color:#b5d1f1;
+    border: none;
+    transition: background-color 0.2s ease;
+    transform: rotate(360deg); /* Rotation du bouton à 90 degrés */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-accept:hover {
+    background-color: #b5d1f1;
+    color: #fff;
+}
+
+.btn-accept:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Autres styles */
+.status-not-completed {
+    margin-top: 10px;
+}
+
+.badge-warning {
+    background-color: #f1c40f;
+}
+
+.badge-warningg {
+    background-color: #cf0404;
+}
+
+/* Médicaments list */
+.medicaments-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.medicaments-list li {
+    margin-bottom: 5px;
+}
+
+/* Section pour le titre du patient */
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Section médecin : informations sur le médecin */
+.d-flex.flex-column p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.d-flex.flex-column p strong {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Alignement de la partie médecin (adresse et téléphone) */
+.d-flex.flex-column {
+    text-align: left;
+}
+
+.d-flex.flex-column p {
+    font-size: 0.9rem;
+}
+
+/* Liens (si présents dans les informations) */
+.btn-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Alignement de la section du patient et médecin */
+.d-flex.justify-content-start {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Icône d'ordonnance */
+.icofont-prescription {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Mise à jour des marges autour du contenu */
+.card-body .d-flex.flex-column p,
+.card-body .medicaments-list ul {
+    margin-bottom: 8px;
+}
+
+/* Zone des statuts (Pending, Not Completed) */
+.status-not-completed {
+    margin-top: 10px;
+}
+
+.badge-warning {
+    background-color: #f1c40f;
+}
+
+.badge-warningg {
+    background-color: #cf0404;
+}
+
+/* Ajustement de la section droite pour les informations sur le médecin et la date */
+.d-flex.flex-column {
+    text-align: left;
+}
+
+/* Si nécessaire, ajuster les marges des éléments */
+.d-flex.justify-content-start.align-items-center.mb-3 {
+    margin-top: -10px;
+}
+
+/* Style pour la section médication */
+.medicaments-list {
+    margin-top: 10px;
+}
+
+.medicaments-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.medicaments-list li {
+    margin-bottom: 5px;
+}
